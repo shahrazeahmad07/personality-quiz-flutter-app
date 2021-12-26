@@ -66,7 +66,7 @@ class MyAppState extends State<MyApp> {
       home: Scaffold(
         backgroundColor: const Color(0xFFF4EEA9),
         appBar: AppBar(
-          title: const Text("Flutter"),
+          title: const Text("Personality Quiz"),
         ),
         body: _questionIndex < _questions.length
             ? Quiz(
