@@ -20,8 +20,17 @@ class Result extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print("Final Score: $_score");
-    return Center(
+    return Container(
+      height: double.infinity,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.black,
+          width: 10,
+        ),
+      ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
             resultPhrase + "\nand your score is $_score.",
@@ -29,6 +38,7 @@ class Result extends StatelessWidget {
               fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
+            textAlign: TextAlign.center,
           ),
           TextButton(
             onPressed: reset,
@@ -39,6 +49,9 @@ class Result extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
+          ),
+          const SizedBox(
+            height: 20,
           ),
         ],
       ),
