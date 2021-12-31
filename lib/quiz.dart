@@ -11,7 +11,7 @@ class Quiz extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: [
         Question(questions[questionIndex]["Question"] as String),
         ...(questions[questionIndex]["Answers"] as List<Map<String, Object>>)

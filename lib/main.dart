@@ -40,6 +40,8 @@ class MyAppState extends State<MyApp> {
         {'text': "Pulao", 'score': 10},
         {'text': "Biryani", 'score': 11},
         {'text': "Pizza", 'score': 9},
+        {'text': "Pizza", 'score': 9},
+        {'text': "Pizza", 'score': 9},
         {'text': "All", 'score': 15}
       ]
     },
@@ -69,10 +71,12 @@ class MyAppState extends State<MyApp> {
           title: const Text("Personality Quiz"),
         ),
         body: _questionIndex < _questions.length
-            ? Quiz(
-                questions: _questions,
-                questionIndex: _questionIndex,
-                buttonFunction: _buttonFunction,
+            ? SingleChildScrollView(
+                child: Quiz(
+                  questions: _questions,
+                  questionIndex: _questionIndex,
+                  buttonFunction: _buttonFunction,
+                ),
               )
             : Result(_totalScore, resetQuizButton),
       ),
