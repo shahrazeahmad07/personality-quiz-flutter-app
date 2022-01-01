@@ -71,11 +71,22 @@ class MyAppState extends State<MyApp> {
           title: const Text("Personality Quiz"),
         ),
         body: _questionIndex < _questions.length
-            ? SingleChildScrollView(
-                child: Quiz(
-                  questions: _questions,
-                  questionIndex: _questionIndex,
-                  buttonFunction: _buttonFunction,
+            ? Container(
+                height: double.infinity,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 10,
+                  ),
+                ),
+                alignment: Alignment.center,
+                child: SingleChildScrollView(
+                  child: Quiz(
+                    questions: _questions,
+                    questionIndex: _questionIndex,
+                    buttonFunction: _buttonFunction,
+                  ),
                 ),
               )
             : Result(_totalScore, resetQuizButton),

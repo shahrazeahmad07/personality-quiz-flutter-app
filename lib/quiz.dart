@@ -18,6 +18,9 @@ class Quiz extends StatelessWidget {
             .map((answer) {
           return Answer(() => buttonFunction(answer['score']), answer['text']);
         }),
+        const SizedBox(
+          height: 50,
+        ),
       ],
     );
   }
